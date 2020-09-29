@@ -18,6 +18,7 @@ Vagrant.configure(2) do |config|
   end
 
 #Change the value to have number of nodes for your k8s cluster.
+#If you have need more than 2 nodes then make sure to add DNS entries in bootstrap.sh
   NodeCount = 2
   (1..NodeCount).each do |i|
     config.vm.define "k8s-worker#{i}" do |workernode|
